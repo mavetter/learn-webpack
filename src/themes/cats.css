@@ -1,0 +1,10 @@
+/* Shared */
+@import '../shared/colors.css';
+@import '../shared/typography.css';
+/* Components */
+@import '../components/Article.css';
+
+/* Theme */
+body {
+  background-color: bisque;
+}
