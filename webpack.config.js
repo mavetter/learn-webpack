@@ -11,6 +11,10 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist/assets'),
   },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    port:9000
+  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
