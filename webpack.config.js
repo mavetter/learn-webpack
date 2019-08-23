@@ -1,6 +1,8 @@
 // const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const postcssCustomProperties = require('postcss-custom-properties');
+const postcssCustomMedia = require('postcss-custom-media');
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -30,7 +32,23 @@ module.exports = {
             options: {importLoaders: 1},
           },
           {
-            loader: 'postcss-loader',
+            loader: 'postcss-loader', options: {
+              indent: 'postcss',
+              plugins: () => [
+                postcssCustomProperties({
+                  importFrom: [
+                    './src/shared/colors.css',
+                    './src/shared/typography.css'
+                  ],
+                  preserve: false
+                }),
+                postcssCustomMedia({
+                  importFrom: [
+                    './src/shared/media.css'
+                  ],
+                })
+              ]
+            }
           },
         ],
       },
