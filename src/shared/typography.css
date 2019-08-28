@@ -1,7 +1,27 @@
 :root {
-  --font-text: 'Noto Serif', serif;
-  --font-headline: 'Open Sans', sans-serif;
-  --font-weight: 400;
-  --font-weight-headline: 800;
-  --line-height: 1.5;
+  /* text */
+  --text-font-family: 'Open Sans', sans-serif;
+  --text-font-size: 16px;
+
+  /* headlines */
+  --headline-font-family: 'Noto Serif', serif;
+  --headline-font-size: 32px;
+
+  /* default for all typos */
+  --default-font-weight: 400;
+  --default-line-height: 1.5;
+}
+
+@media screen and (min-width: 800px) {
+  :root {
+    --text-font-size: 18px;
+    --headline-font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --text-font-size: 20px;
+    --headline-font-size: 48px;
+  }
 }

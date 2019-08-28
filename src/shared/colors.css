@@ -1,5 +1,12 @@
 :root {
-  --color-black: rgb(0, 0, 0);
-  --color-max-dark: #505759;
-  --color-accent: #FC766A;
+  --color-neutral-0: #ffffff;
+  --color-neutral-5: #dfdfdf;
+  --color-neutral-10: #bfbfbf;
+  --color-neutral-20: #808080;
+  --color-neutral-30: #404040;
+  --color-neutral-40: #000000;
+
+  --color-primary: #3949ab;
+  --color-primary-light: #6f74dd;
+  --color-primary-dark: #00227b;
 }
