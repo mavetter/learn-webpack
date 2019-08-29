@@ -1,11 +1,12 @@
 // const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MediaQueryPlugin = require('media-query-plugin');
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
-    app: ['./app.js', './app.css']
+    example: './example.js'
   },
   output: {
     filename: '[name].bundle.js',
@@ -15,6 +16,15 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
+    new MediaQueryPlugin({
+      include: [
+        'example',
+      ],
+      queries: {
+        'screen and (min-width: 800px)': 'medium',
+        'screen and (min-width: 1200px)': 'large'
+      }
+    })
   ],
   module: {
     rules: [
@@ -22,16 +32,10 @@ module.exports = {
         test: /\.css$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          {
-            loader: 'css-loader',
-            options: {importLoaders: 1},
-          },
-          {
-            loader: 'postcss-loader',
-          },
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          MediaQueryPlugin.loader,
+          'postcss-loader'
         ],
       },
     ]
