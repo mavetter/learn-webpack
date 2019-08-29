@@ -1,12 +1,11 @@
 :root {
-  --color-neutral-0: #ffffff;
+  --color-max-light: #ffffff;
   --color-neutral-5: #dfdfdf;
   --color-neutral-10: #bfbfbf;
   --color-neutral-20: #808080;
   --color-neutral-30: #404040;
-  --color-neutral-40: #000000;
+  --color-max-dark: #000000;
 
-  --color-primary: #3949ab;
-  --color-primary-light: #6f74dd;
-  --color-primary-dark: #00227b;
+  --color-primary: #311f5e;
+  --color-secondary: #E4EFCF;
 }

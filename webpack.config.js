@@ -6,7 +6,7 @@ const MediaQueryPlugin = require('media-query-plugin');
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
-    example: './example.js'
+    app: ['./app.js', './app.css']
   },
   output: {
     filename: '[name].bundle.js',
@@ -18,7 +18,7 @@ module.exports = {
     }),
     new MediaQueryPlugin({
       include: [
-        'example',
+        'app',
       ],
       queries: {
         'screen and (min-width: 800px)': 'medium',
@@ -33,7 +33,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          { loader: 'css-loader', options: { importLoaders: 1 } },
           MediaQueryPlugin.loader,
           'postcss-loader'
         ],

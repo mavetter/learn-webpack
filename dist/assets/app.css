@@ -1,16 +1,15 @@
+/* Shared */
 :root {
-  --color-neutral-0: #ffffff;
+  --color-max-light: #ffffff;
   --color-neutral-5: #dfdfdf;
   --color-neutral-10: #bfbfbf;
   --color-neutral-20: #808080;
   --color-neutral-30: #404040;
-  --color-neutral-40: #000000;
+  --color-max-dark: #000000;
 
-  --color-primary: #3949ab;
-  --color-primary-light: #6f74dd;
-  --color-primary-dark: #00227b;
+  --color-primary: #311f5e;
+  --color-secondary: #E4EFCF;
 }
-
 :root {
   /* text */
   --text-font-family: 'Open Sans', sans-serif;
@@ -24,27 +23,23 @@
   --default-font-weight: 400;
   --default-line-height: 1.5;
 }
-
+body {
+  background-color: var(--color-secondary);
+}
+/* Components */
 .article h1 {
   color: var(--color-primary);
   font-family: var(--headline-font-family);
   font-size: var(--headline-font-size);
   font-weight: var(--default-font-weight);
   line-height: var(--default-line-height);
-  margin-bottom: 0;
+  margin: 0 0 0.25em;
 }
-
 .article p {
-  color: var(--color-neutral-40);
+  color: var(--color-primary);
   font-family: var(--text-font-family);
   font-size: var(--text-font-size);
   line-height: var(--default-line-height);
+  margin: 0 0 0.5em;
 }
-
-.article p a {
-  color: var(--color-primary);
-}
-
-/* Shared */
-/* Components */
 

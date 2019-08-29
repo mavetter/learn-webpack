@@ -4,22 +4,29 @@
   font-size: var(--headline-font-size);
   font-weight: var(--default-font-weight);
   line-height: var(--default-line-height);
-  margin-bottom: 0;
+  margin: 0 0 0.25em;
 }
 
 .article p {
-  color: var(--color-neutral-40);
+  color: var(--color-primary);
   font-family: var(--text-font-family);
   font-size: var(--text-font-size);
   line-height: var(--default-line-height);
-}
-
-.article p a {
-  color: var(--color-primary);
+  margin: 0 0 0.5em;
 }
 
 @media screen and (min-width: 800px) {
   .article h1 {
-    margin-bottom: 20px;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .article h1 {
+    margin-bottom: 0.75em;
+  }
+
+  .article p {
+    margin-bottom: 1.5em;
   }
 }
